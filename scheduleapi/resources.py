@@ -15,5 +15,3 @@ class BinScheduleResource(ModelResource):
     class Meta:
         queryset = BinSchedule.objects.all()
         resource_name = 'binschedule'
-
-#comment
