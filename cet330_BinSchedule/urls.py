@@ -18,11 +18,12 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.contrib import admin
 from tastypie.api import Api
-from scheduleapi.resources import CouncilRegistrationResource, BinScheduleResource
+from scheduleapi.resources import CouncilRegistrationResource, BinScheduleResource, BinTypeResource
 
 v1_api = Api(api_name='v1')
 v1_api.register(CouncilRegistrationResource())
 v1_api.register(BinScheduleResource())
+v1_api.register(BinTypeResource())
 
 
 urlpatterns = [
