@@ -26,8 +26,25 @@ class BinType(models.Model):
 class BinSchedule(models.Model):
     schedule_id = models.AutoField(primary_key=True)
     council_id = models.ForeignKey('CouncilRegistration', on_delete=models.CASCADE, null=True)
-    date = models.DateField(null=False, blank=False)
+    date = models.DateTimeField(null=False, blank=False)
     bin_id = models.ForeignKey('BinType', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return 'Bin Schedule {0}'.format(self.schedule_id)
+
+
+class PostcodeTBL (models.Model):
+    postcode_id = models.AutoField(primary_key=True)
+    postcode = models.CharField(max_length=10)
+    council_id = models.ForeignKey('CouncilRegistration', on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.postcode
+
+
+class PostcodeGrouping (models.Model):
+    grouping_id = models.AutoField(primary_key=True)
+    # New Int grouping ID to group the postcodes
+    group_id = models.IntegerField(null=False)
+    postcode_id = models.ForeignKey('PostcodeTBL', on_delete=models.CASCADE, null=True)
+    area = models.CharField(max_length=60)
