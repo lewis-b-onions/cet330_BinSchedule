@@ -20,6 +20,7 @@ from django.contrib import admin
 from tastypie.api import Api
 from scheduleapi.resources import CouncilRegistrationResource, BinScheduleResource, BinTypeResource
 
+
 v1_api = Api(api_name='v1')
 v1_api.register(CouncilRegistrationResource())
 v1_api.register(BinScheduleResource())
@@ -30,5 +31,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/', include(v1_api.urls)),
     url(r'^bincollections/', include('scheduleapi.urls')),
-
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
