@@ -30,6 +30,7 @@ v1_api.register(BinTypeResource())
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/', include(v1_api.urls)),
+    path('users/', include('users.urls')),
     url(r'^bincollections/', include('scheduleapi.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
