@@ -48,3 +48,4 @@ class PostcodeGrouping (models.Model):
     group_id = models.IntegerField(null=False)
     postcode_id = models.ForeignKey('PostcodeTBL', on_delete=models.CASCADE, null=True)
     area = models.CharField(max_length=60)
+
