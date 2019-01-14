@@ -49,3 +49,17 @@ class PostcodeGrouping (models.Model):
     postcode_id = models.ForeignKey('PostcodeTBL', on_delete=models.CASCADE, null=True)
     area = models.CharField(max_length=60)
 
+
+class BinScheduleMapping (models.Model):
+    id = models.AutoField(primary_key=True)
+    binschedule_id = models.OneToOneField('BinSchedule', on_delete=models.CASCADE, null=True)
+    postcodegrouping_id = models.OneToOneField('PostcodeGrouping', on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return 'Bin Schedule Mapping: {0}'.format(self.binschedule_id)
+
+
+class UserBinMap (models.Model):
+    id = models.AutoField(primary_key=True)
+    userbin_id = models.ForeignKey('users.CustomUser', on_delete=models.CASCADE, null=True)
+    bin_id = models.ForeignKey('BinType', on_delete=models.CASCADE, null=True)
