@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+import uuid
 
 
 class CustomUser(AbstractUser):
@@ -8,7 +9,8 @@ class CustomUser(AbstractUser):
     lastname = models.CharField(max_length=64)
     mobile = models.CharField(max_length=50)
     postcode = models.CharField(max_length=20, null=False)
-    door_number = models.IntegerField(default=0, null=False)
+    door_number = models.IntegerField(default=1, null=False)
+    # token = models.CharField(default=uuid.uuid4())
 
     def __str__(self):
         return self.email

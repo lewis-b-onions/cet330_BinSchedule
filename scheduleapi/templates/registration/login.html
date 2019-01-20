@@ -12,7 +12,7 @@
             <h2 class="title">New User?</h2>
             <br>
             <!-- Creating a seperate sign up button in the crisp form for none registered users !-->
-            <a href="" class="btn btn-secondary">Create an account</a>
+            <a href="/users/signup/" class="btn btn-secondary">Create an account</a>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6">
             <div>
@@ -25,7 +25,7 @@
                     else's credentials !-->
                     {% csrf_token %}
                     <!-- Loading sign in form in a crispy form template !-->
-                    <p>{{ form|crispy}}</p>
+                    {{ form|crispy}}
                     <button type="submit" class="btn btn-secondary">Login</button>
                 </form>
                 <br>

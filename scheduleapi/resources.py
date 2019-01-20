@@ -2,6 +2,7 @@ from tastypie.resources import ModelResource
 from tastypie import fields, utils
 from tastypie.authorization import Authorization
 from scheduleapi.models import CouncilRegistration, BinSchedule, BinType
+from tastypie.authentication import ApiKeyAuthentication
 
 
 class CouncilRegistrationResource(ModelResource):
@@ -30,3 +31,4 @@ class BinScheduleResource(ModelResource):
         queryset = BinSchedule.objects.all().select_related("council_id").select_related("bin_id")
         resource_name = 'binschedule'
         authorization = Authorization()
+        authentication = ApiKeyAuthentication()
