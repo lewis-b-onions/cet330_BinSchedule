@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block content %}
 
   <!-- Jumbotron Header -->
@@ -14,10 +14,11 @@
 
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
-        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <img class="img-fluid pt-2" src="{% static 'recycle-logo.png' %}">
         <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          <h4 class="card-title">Recycling</h4>
+          <p class="card-text">{{date2}}</p>
+          <p class="card-text">{{bin2}}</p>
         </div>
         <div class="card-footer">
           <a href="#" class="btn btn-primary">Find Out More!</a>
@@ -27,10 +28,11 @@
 
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
-        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <img class="img-fluid pt-2" src="{% static 'leaves.png' %}">
         <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+          <h4 class="card-title">Garden Waste</h4>
+          <p class="card-text">{{date1}}</p>
+          <p class="card-text">{{bin1}}</p>
         </div>
         <div class="card-footer">
           <a href="#" class="btn btn-primary">Find Out More!</a>
@@ -40,10 +42,11 @@
 
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
-        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <img class="img-fluid pt-2" src="{% static 'trash.jpg' %}">
         <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          <h4 class="card-title">General Waste</h4>
+          <p class="card-text">{{date3}}</p>
+          <p class="card-text">{{bin3}}</p>
         </div>
         <div class="card-footer">
           <a href="#" class="btn btn-primary">Find Out More!</a>

@@ -10,6 +10,7 @@ class CustomUser(AbstractUser):
     mobile = models.CharField(max_length=50)
     postcode = models.CharField(max_length=20, null=False)
     door_number = models.IntegerField(default=1, null=False)
+    postcode_ref = models.OneToOneField('scheduleapi.PostcodeTBL', on_delete=models.CASCADE, null=True)
     # token = models.CharField(default=uuid.uuid4())
 
     def __str__(self):

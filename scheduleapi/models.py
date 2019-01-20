@@ -50,7 +50,7 @@ class PostcodeGrouping (models.Model):
 class BinScheduleMapping (models.Model):
     id = models.AutoField(primary_key=True)
     binschedule_id = models.OneToOneField('BinSchedule', on_delete=models.CASCADE, null=True)
-    postcodegrouping_id = models.OneToOneField('PostcodeGrouping', on_delete=models.CASCADE, null=True)
+    postcodegrouping_id = models.ForeignKey('PostcodeGrouping', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return 'Bin Schedule Mapping: {0}'.format(self.binschedule_id)
