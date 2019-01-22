@@ -22,9 +22,9 @@
   <body style="">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#000000">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#53687E">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#"> <img src="{% static 'logo1.png' %}" height="100" width="100">  </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,9 +32,9 @@
           <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                   {% if user.is_authenticated %}
-                  <p class="nav-link"   > Hi {{ user.username }}! <a href="{% url 'logout' %}">logout</a> <a href="{% url 'password_reset' %}">reset password</a></p>
+                  <p class="nav-link"> Hi {{ user.username }}!     <a href="{% url 'logout' %}" style="color:white">   Logout</a> <a href="{% url 'password_reset' %}">Reset password</a></p>
                     {% else %}
-                      <p class="nav-link">You are not logged in <a href="{% url 'login' %}">login</a></p>
+                      <p class="nav-link">You are not logged in <a href="{% url 'login' %}">Login</a></p>
                   {% endif %}
               </li>
             <li class="nav-item active">
@@ -43,12 +43,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="">Settings</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <br>
+    <br>
 
     <!-- Page Content -->
     <div class="container p-3">
@@ -59,7 +61,7 @@
 
     <!-- Footer -->
 
-    <footer class=" p-1 bg-dark fixed-bottom" height="100">
+    <footer class="fixed-bottom" height="100" style="background-color:#53687E">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
       </div>
