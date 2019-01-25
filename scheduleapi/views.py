@@ -46,4 +46,7 @@ def home(request):
 
 
 def settings(request):
-    return render(request, 'settings.html')
+    if request.user.is_authenticated:
+        return render(request, 'bincollections/settings.html')
+    else:
+        return redirect('login')

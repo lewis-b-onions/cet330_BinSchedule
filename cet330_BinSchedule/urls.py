@@ -33,6 +33,5 @@ urlpatterns = [
     url(r'^api/', include(v1_api.urls)),
     path('users/', include('users.urls')),
     url(r'^bincollections/', include('scheduleapi.urls')),
-    # url(r'^settings/', include('scheduleapi.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

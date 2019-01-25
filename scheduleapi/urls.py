@@ -6,7 +6,7 @@ from . import views
 
 urlpatterns = [
 # Start ^ and Stop $ - urls in project file will look into this for page loc e.g. bincollections
-    url(r'^$', views.home),
-    url(r'settings^$', views.settings),
+    url(r'^$', views.home, name='homepage'),
+    url('settings/', views.settings, name='settings'),
 
 ]
