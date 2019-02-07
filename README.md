@@ -1,15 +1,37 @@
 # My Bin Collector
 
-thisghioa;hrgofgn
+Welcome to the My Bin Collector API documentation which will provide you a high level understanding of the core requirements, Tastpie overview, API endpoints, a code example and various Tastypie help material.
+
+## Requirements
+
+### Core
+
+* Python 2.7+ or Python 3.4+
+* Django - 1.11 (LTS), 2.0 (LTS) or 2.1 - the last two LTS and the last incremental release are supported.
+* dateutil (http://labix.org/python-dateutil) >= 2.1
+
+
+
+## Django Tastypie
+
+There are other API frameworks out there for Django. You need to assess the options available and decide for yourself.
+That said, here are some common reasons for tastypie.
+
+* You need an API that is RESTful and uses HTTP well.
+* You want to support deep relations.
+* You DON'T want to have to write your own serializer to make the output right.
+* You want an API framework that has little magic, very flexible and maps well to the problem domain.
+* You want/need XML serialization that is treated equally to JSON (and YAML is there too).
 
 ## Endpoints
 
-sdgfsdfgsdfg
+### Application endpoints
 
-| Method        | URL           | Description  |
-| ------------- |:-------------:| -----:|
-| GET      | /something     | This gets data |
-| POST     | /centered      | This posts data |
+
+| Method        | URL           | Description  | Parameters | API Key
+| ------------- |:-------------:| -----:| -----:| -----:|
+| GET      | /api/v1/binschedule/    | This gets data | N/A [Filter available, see Tastypie docs] | True
+| POST     | /api/v1/binschedule/      | This posts data | [Council name] [date] [bin_type] | True
 
 
 ## Code example
@@ -36,3 +58,11 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
 ]
 ```
+
+## Help material
+
+* https://django-tastypie.readthedocs.io/en/latest/
+* http://tastypieapi.org/
+* https://realpython.com/create-a-super-basic-rest-api-with-django-tastypie/
+* https://www.agiliq.com/blog/2015/03/getting-started-with-django-tastypie/
+* https://codeburst.io/create-a-django-api-in-under-20-minutes-2a082a60f6f3
