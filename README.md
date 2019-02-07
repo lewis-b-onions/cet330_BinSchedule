@@ -17,7 +17,7 @@ sdgfsdfgsdfg
 
 The below code example demonstrates the APIs URLS associated with there developed resources used as part of the
 infrastructure to communicate to the data layer. If the API concept were to be expanded, please ensure the developed
-resource names are added to the v1_api.register object which will be access as part of the api/ Url.
+resource names are added to the v1_api.register object which will be access as part of the "api/" URL.
 
 
 ```python
