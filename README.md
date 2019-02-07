@@ -1,11 +1,24 @@
 # My Bin Collector
 
+thisghioa;hrgofgn
+
 ## Endpoints
+
+sdgfsdfgsdfg
 
 | Method        | URL           | Description  |
 | ------------- |:-------------:| -----:|
 | GET      | /something     | This gets data |
 | POST     | /centered      | This posts data |
+
+
+## Code example
+
+
+The below code example demonstrates the APIs URLS associated with there developed resources used as part of the
+infrastructure to communicate to the data layer. If the API concept were to be expanded, please ensure the developed
+resource names are added to the v1_api.register object which will be access as part of the api/ Url.
+
 
 ```python
 #urls.py
