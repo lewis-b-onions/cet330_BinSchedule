@@ -2,10 +2,10 @@
 
 ## Endpoints
 
-Method | URL | Description
------------- | -------------
-Content cell 1 | Content cell 2 | sfg
-Content column 1 | Content column 2 | sdfgsdg
+| Method        | URL           | Description  |
+| ------------- |:-------------:| -----:|
+| GET      | /something     | This gets data |
+| POST     | /centered      | This posts data |
 
 ```python
 #urls.py
